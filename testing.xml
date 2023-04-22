@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="tests" name="Suite">
+	
+	
+
+
+<!-- 
+<test name="iOS_8">
+    <listeners><listener class-name = "com.qa.listeners.TestListener"></listener></listeners>
+	<parameter name="platformName" value ="iOS" />
+	<parameter name="deviceName" value ="iPhone 8" />
+	<parameter name="platformVersion" value ="16.1" />
+	<parameter name="udid" value ="0EB51718-1A9C-41BF-BFAE-8A9988FA3651" />
+	<parameter name="wdaLocalPort" value ="10001" />
+	<parameter name="webkitDebugProxyPort" value ="11001" />
+	
+    <classes>
+		
+      <class name="com.qa.tests.ProductTests">
+		  
+    
+	  </class>
+	    
+	
+	  
+	  
+    </classes>
+  </test> 
+  
+-->
+  
+ 
+ <test name="iOS_14">
+    <listeners><listener class-name = "com.qa.listeners.TestListener"></listener></listeners>
+	<parameter name="platformName" value ="iOS" />
+	<parameter name="deviceName" value ="iPhone 14" />
+	<parameter name="platformVersion" value ="16.1" />
+	<parameter name="udid" value ="82DC5A28-2F0B-4069-9597-C85F2219BBDD" />
+	<parameter name="wdaLocalPort" value ="10002" />
+	<parameter name="webkitDebugProxyPort" value ="11002" />
+	
+    <classes>
+		
+      <class name="com.qa.tests.ProductTests">
+    
+	  </class>
+	    
+	
+	  
+	  
+    </classes>
+  </test> 
+
+
+
+
+  <test name="Android_6">
+    <listeners><listener class-name = "com.qa.listeners.TestListener"></listener></listeners>
+	<parameter name="platformName" value ="Android" />
+	<parameter name="deviceName" value ="Pixel_6_pro" />
+	<parameter name="platformVersion" value ="13" />
+	<parameter name="udid" value ="emulator-5554" />
+	<parameter name="systemPort" value ="10000" />
+	<parameter name="chromeDriverPort" value ="11000" />
+	
+    <classes>
+		
+      <class name="com.qa.tests.ProductTests">
+		 
+	  </class>
+	  
+	
+	  
+    </classes>
+  </test>  
+  
+
+  
+  <!--
+ 
+   <test name="Android_6_pro">
+    <listeners><listener class-name = "com.qa.listeners.TestListener"></listener></listeners>
+	<parameter name="platformName" value ="Android" />
+	<parameter name="deviceName" value ="Pixel_6_pro" />
+	<parameter name="platformVersion" value ="13" />
+	<parameter name="udid" value ="emulator-5556" />
+	<parameter name="systemPort" value ="10003" />
+	<parameter name="chromeDriverPort" value ="11003" />
+	
+    <classes>
+		
+      <class name="com.qa.tests.LoginTests">
+		 
+	  </class>
+	  
+	
+	  
+    </classes>
+  </test>  
+  
+   -->
+   
+ 
+  
+  
+  
+  
+ 
+  
+  
+</suite> <!-- Suite -->
+
+<!-- 
+<class name="com.qa.tests.ProductTests">
+ </class>
+ 
+ <methods>
+		  <include name ="ValidUser"></include>
+	  </methods>
+	  
+-->
