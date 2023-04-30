@@ -1,0 +1,3 @@
+[${ctx:ROUTINGKEY} INFO ] 2023-04-26 16:11:41.298 BaseTest:525 - Appium Server Stop
+[${ctx:ROUTINGKEY} INFO ] 2023-04-26 16:13:34.915 BaseTest:525 - Appium Server Stop
+[${ctx:ROUTINGKEY} INFO ] 2023-04-26 16:23:55.950 BaseTest:525 - Appium Server Stop

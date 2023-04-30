@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 1, Errors: 0, Skipped: 8, Time elapsed: 80.682 s <<< FAILURE! - in TestSuite
+com.qa.tests.ProductTests.afterMethod  Time elapsed: 14.772 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.3.1', java.version: '17.0.6'
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [c131a0b0-4ee4-41db-9122-0078c0464db0, findElement {using=xpath, value=//XCUIElementTypeOther[@name="test-Menu"]}]
+Capabilities {appium:automationName: XCUITest, appium:bundleId: com.saucelabs.SwagLabsMobil..., appium:databaseEnabled: false, appium:deviceName: iPhone 14, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 16.1, appium:takesScreenshot: true, appium:udid: 82DC5A28-2F0B-4069-9597-C85..., appium:wdaLocalPort: 10002, appium:webStorageEnabled: false, appium:webkitDebugProxyPort: 11002, platformName: IOS}
+Session ID: c131a0b0-4ee4-41db-9122-0078c0464db0
+	at com.qa.tests.ProductTests.afterMethod(ProductTests.java:107)
+Caused by: org.openqa.selenium.remote.UnreachableBrowserException: 
+Error communicating with the remote browser. It may have died.
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.3.1', java.version: '17.0.6'
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [c131a0b0-4ee4-41db-9122-0078c0464db0, findElement {using=xpath, value=//XCUIElementTypeOther[@name="test-Menu"]}]
+Capabilities {appium:automationName: XCUITest, appium:bundleId: com.saucelabs.SwagLabsMobil..., appium:databaseEnabled: false, appium:deviceName: iPhone 14, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 16.1, appium:takesScreenshot: true, appium:udid: 82DC5A28-2F0B-4069-9597-C85..., appium:wdaLocalPort: 10002, appium:webStorageEnabled: false, appium:webkitDebugProxyPort: 11002, platformName: IOS}
+Session ID: c131a0b0-4ee4-41db-9122-0078c0464db0
+	at com.qa.tests.ProductTests.afterMethod(ProductTests.java:107)
+Caused by: java.io.UncheckedIOException: org.asynchttpclient.exception.RemotelyClosedException: Remotely closed
+	at com.qa.tests.ProductTests.afterMethod(ProductTests.java:107)
+Caused by: org.asynchttpclient.exception.RemotelyClosedException: Remotely closed
+

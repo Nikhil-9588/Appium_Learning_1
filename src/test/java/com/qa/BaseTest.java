@@ -18,11 +18,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.ServerSocket;
 import java.net.URL;
@@ -57,7 +53,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 
-
+// Appiurm_Learning_file_3
 
 public class BaseTest {
   
@@ -85,7 +81,7 @@ public class BaseTest {
   public BaseTest()
   {
 	  
-	  
+
 	  PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
   }
   
@@ -162,7 +158,13 @@ public class BaseTest {
   @Parameters({"deviceName" , "platformName" ,  "platformVersion" ,"udid",  "systemPort" , "chromeDriverPort" , "wdaLocalPort" , "webkitDebugProxyPort"})
   @BeforeTest
   public void beforeTest(String DeviceName , String  platformName , String PlatformVersion  , String udid  ,@Optional("androidOnly")String systemPort , @Optional("androidOnly")String chromeDriverPort, @Optional("iOSOnly")String wdaLocalPort , @Optional("iOSOnly")String webkitDebugProxyPort ) throws Exception {
-	  
+
+
+
+	  server1 = getAppiumServer(4723);
+	  server2= getAppiumServer(4724);
+	  server1.start();
+	  server2.start();
 	  
 	  TestUtils  utils = new TestUtils();
 	  setDateTime(utils.DateTime()) ;
@@ -189,10 +191,7 @@ public class BaseTest {
 		ThreadContext.put("ROUTINGKEY", strFile);
 		utils.log().info("Test Message For log");
 		
-		 server1 = getAppiumServer(4723);
-		 server2= getAppiumServer(4724);
-		 server1.start();
-		 server2.start();
+
 		 
 		
 	 
@@ -204,11 +203,15 @@ public class BaseTest {
 		  
 		  // config.property file read 
 		  prop = new Properties();
-		  String propFileName = "config.properties";
-		  inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+//		  String propFileName = "config.properties";
+//		  inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+//		  prop.load(inputStream);
+//		  setProps(prop);
+
+		  String propFilePath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "config.properties";
+		  inputStream = new FileInputStream(propFilePath);
 		  prop.load(inputStream);
 		  setProps(prop);
-		  
 		  
 //		  // XML file read
          String xmlFileName = "strings/strings.xml";
@@ -241,7 +244,7 @@ public class BaseTest {
 			    desiredCapabilities.setCapability("chromeDriverPort", chromeDriverPort);
 			   
 			    
-			    
+
 			    url = null;
 			    url = new URL(prop.getProperty("AndroidAppiumUrl"));	
 				driver = new AndroidDriver(url,desiredCapabilities);
@@ -252,7 +255,8 @@ public class BaseTest {
 		    	
 		    	
 		    	
-		    	String  iOS_appUrl = getClass().getResource(prop.getProperty("iOSappLocation")).getFile();
+		    	String  iOS_appUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "app" + File.separator + "iOSSauceLabsMobileSample.app";
+				//	getClass().getResource(prop.getProperty("iOSappLocation")).getFile();
 		    	utils.log("iOS App Url is " + iOS_appUrl );
 		    	//System.out.println("iOS App Url is " + iOS_appUrl );
 		    	
@@ -352,7 +356,7 @@ public String getAttribute(WebElement e  )
 
 public void clear(WebElement e  )
 {  
-	waitForVisibility( e);
+	waitForVisibility(e);
 	e.clear();
 }
 
@@ -477,8 +481,10 @@ public void setProps(Properties prop2)
 @AfterTest
 public void aftertest()
 {
-	
-	getDriver().quit();
+
+//	if(getDriver() != null){
+//		getDriver().quit();
+//	}
 	
 	
 	if (server1 != null) {
@@ -519,8 +525,7 @@ public void beforeSuite() throws AppiumServerHasNotBeenStartedLocallyException, 
 @AfterSuite
 public void afterSuite()
 {
-	
-	
+
 	utils.log().info("Appium Server Stop");
 	
 }

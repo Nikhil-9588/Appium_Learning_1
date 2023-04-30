@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="tests" name="Suite">
+<suite name="Suite" parallel="tests" >
 	
 	
 
@@ -29,7 +29,7 @@
   
 -->
   
- 
+
  <test name="iOS_14">
     <listeners><listener class-name = "com.qa.listeners.TestListener"></listener></listeners>
 	<parameter name="platformName" value ="iOS" />
@@ -38,23 +38,19 @@
 	<parameter name="udid" value ="82DC5A28-2F0B-4069-9597-C85F2219BBDD" />
 	<parameter name="wdaLocalPort" value ="10002" />
 	<parameter name="webkitDebugProxyPort" value ="11002" />
-	
+
     <classes>
-		
+
       <class name="com.qa.tests.ProductTests">
-    
+
 	  </class>
-	    
-	
-	  
-	  
     </classes>
-  </test> 
+  </test>
 
 
 
 
-  <test name="Android_6">
+  <test name="Android_6_pro">
     <listeners><listener class-name = "com.qa.listeners.TestListener"></listener></listeners>
 	<parameter name="platformName" value ="Android" />
 	<parameter name="deviceName" value ="Pixel_6_pro" />
@@ -62,18 +58,15 @@
 	<parameter name="udid" value ="emulator-5554" />
 	<parameter name="systemPort" value ="10000" />
 	<parameter name="chromeDriverPort" value ="11000" />
-	
+
     <classes>
-		
+
       <class name="com.qa.tests.ProductTests">
-		 
+
 	  </class>
-	  
-	
-	  
     </classes>
-  </test>  
-  
+  </test>
+
 
   
   <!--
@@ -92,8 +85,7 @@
       <class name="com.qa.tests.LoginTests">
 		 
 	  </class>
-	  
-	
+
 	  
     </classes>
   </test>  

@@ -1,0 +1,6 @@
+21:iOS:iPhone 14:com.qa.BaseTest:===========iOS=================
+21:iOS:iPhone 14:com.qa.BaseTest:iOS App Url is /Users/nikhilkumargupta/eclipse-workspace/TDDFramework2 copy/src/test/resources/app/iOSSauceLabsMobileSample.app
+21:iOS:iPhone 14:com.qa.BaseTest:Super Before Method
+21:iOS:iPhone 14:com.qa.BaseTest:Super After  Method
+21:iOS:iPhone 14:com.qa.BaseTest:Super Before Method
+21:iOS:iPhone 14:com.qa.BaseTest:Super After  Method

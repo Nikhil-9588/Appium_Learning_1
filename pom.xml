@@ -3,7 +3,36 @@
   <groupId>TDDFramework</groupId>
   <artifactId>TDDFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+
+
+    <properties>
+        <jvm.options>--add-opens java.base/java.lang=ALL-UNNAMED</jvm.options>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+
+    <build>
+
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <argLine>${jvm.options}</argLine>
+                </configuration>
+
+            </plugin>
+
+
+
+
+
+
+        </plugins>
+    </build>
   
    <dependencies>
 	 <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
@@ -29,16 +58,16 @@
     <version>20230227</version>
 </dependency>
 
-   	<dependency>
-   		<groupId>Api_Testing</groupId>
-   		<artifactId>Api_Testing</artifactId>
-   		<version>0.0.1-SNAPSHOT</version>
-   	</dependency>
-   	<dependency>
-   		<groupId>com.scrolltest</groupId>
-   		<artifactId>api1</artifactId>
-   		<version>0.0.1-SNAPSHOT</version>
-   	</dependency>
+<!--   	<dependency>-->
+<!--   		<groupId>Api_Testing</groupId>-->
+<!--   		<artifactId>Api_Testing</artifactId>-->
+<!--   		<version>0.0.1-SNAPSHOT</version>-->
+<!--   	</dependency>-->
+<!--   	<dependency>-->
+<!--   		<groupId>com.scrolltest</groupId>-->
+<!--   		<artifactId>api1</artifactId>-->
+<!--   		<version>0.0.1-SNAPSHOT</version>-->
+<!--   	</dependency>-->
    	
    	<dependency>
     <groupId>commons-codec</groupId>
@@ -92,21 +121,9 @@
    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 
 
- 
- <properties>
-<jvm.options>--add-opens java.base/java.lang=ALL-UNNAMED</jvm.options>
-</properties>
- 
-<build>
-<plugins>
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-surefire-plugin</artifactId>
-<version>3.0.0-M5</version>
-<configuration>
-<argLine>${jvm.options}</argLine>
-</configuration>
-</plugin>
-</plugins>
-</build>
+
+
+
+
+
 </project>

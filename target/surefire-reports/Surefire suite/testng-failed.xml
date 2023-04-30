@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="com.qa.tests.LoginTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="InvalidUserName"/>
+          <include name="ValidUser"/>
+          <include name="beforeSuite"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="aftertest"/>
+        </methods>
+      </class> <!-- com.qa.tests.LoginTests -->
+      <class name="com.qa.tests.ProductTests">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="validateProductOnProductsPage"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="validateProductOnProductsdDetailPage"/>
+          <include name="afterSuite"/>
+          <include name="beforeMethod"/>
+          <include name="aftertest"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.qa.tests.ProductTests -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

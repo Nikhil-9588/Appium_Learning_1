@@ -1,0 +1,10 @@
+com/qa/pages/LoginPage.class
+com/qa/utils/TestUtils.class
+com/qa/listeners/TestListener.class
+com/qa/pages/ProductsPage.class
+com/qa/BaseTest.class
+com/qa/pages/SettingPage.class
+com/qa/tests/ProductTests.class
+com/qa/pages/Productdetails.class
+com/qa/tests/LoginTests.class
+com/qa/MenuPage.class

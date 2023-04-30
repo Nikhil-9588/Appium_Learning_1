@@ -177,14 +177,11 @@ public class ProductTests extends BaseTest{
 	 
 	  String SBLtitle = productdetails.getSLBtitle();
 	  sa.assertEquals(SBLtitle, getString().get("product_details_page_slb_title"));
-	  
+	  String SLBTxt = productdetails.getSLBtext();
+	  sa.assertEquals(SLBTxt, getString().get("product_details_page_slb_txt"));
+	  //productpage = productdetails.pressBackToProduct();
 		  
-	      String SLBTxt = productdetails.getSLBtext();
-		  sa.assertEquals(SLBTxt, getString().get("product_details_page_slb_txt"));
-		  
-		  productpage = productdetails.pressBackToProduct();
-		  
-		  sa.assertAll();
+	  sa.assertAll();
 		   
 	  }	
 	  

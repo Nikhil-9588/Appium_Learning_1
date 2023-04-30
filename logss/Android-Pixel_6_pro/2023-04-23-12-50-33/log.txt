@@ -1,0 +1,5 @@
+21:Android:Pixel_6_pro:com.qa.BaseTest:===========Android=================
+21:Android:Pixel_6_pro:com.qa.BaseTest:Android App Url is /Users/nikhilkumargupta/eclipse-workspace/TDDFramework2%20copy/target/test-classes/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+21:Android:Pixel_6_pro:com.qa.BaseTest:Super Before Method
+21:Android:Pixel_6_pro:com.qa.BaseTest:Super After  Method
+21:Android:Pixel_6_pro:com.qa.BaseTest:Super Before Method

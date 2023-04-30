@@ -20,6 +20,8 @@ public class MenuPage extends BaseTest {
 	
 	public SettingPage pressSettingBtn()
 	{
+
+		waitForVisibility(settingBtn);
 		click(settingBtn);
 		return new SettingPage();
 		
