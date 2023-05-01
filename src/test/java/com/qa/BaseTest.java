@@ -167,15 +167,15 @@ public class BaseTest {
 
 
 
-//	  setServer1(getAppiumServer(4723));
-//	  setServer2(getAppiumServer(4724));
-//	  getServer2().start();
-//	  getServer1().start();
+	  setServer1(getAppiumServer(4723));
+	  setServer2(getAppiumServer(4724));
+	  getServer2().start();
+	  getServer1().start();
 
-	  server3 = getAppiumServer(4723);
-	  server4 = getAppiumServer(4724);
-	  server3.start();
-	  server4.start();
+//	  server3 = getAppiumServer(4723);
+//	  server4 = getAppiumServer(4724);
+//	  server3.start();
+//	  server4.start();
 
 	  
 	  TestUtils  utils = new TestUtils();
@@ -494,35 +494,35 @@ public void setProps(Properties prop2)
 public void aftertest()
 {
 
-//	if(getDriver() != null){
-//		getDriver().quit();
-//	}
-
-
-	if (server3 != null) {
-
-		server3.stop();
-		server3=null;
-    }
-
-	if (server4 != null) {
-
-		server4.stop();
-		server4=null;
+	if(getDriver() != null){
+		getDriver().quit();
 	}
 
 
-//	if (getServer1() != null) {
+//	if (server3 != null) {
 //
-//		getServer1().stop();
-//		setServer1(null);
+//		server3.stop();
+//		server3=null;
 //    }
 //
-//    if (getServer2() != null) {
+//	if (server4 != null) {
 //
-//		getServer2().stop();
-//		setServer2(null);
-//    }
+//		server4.stop();
+//		server4=null;
+//	}
+
+
+	if (getServer1() != null) {
+
+		getServer1().stop();
+		setServer1(null);
+    }
+
+    if (getServer2() != null) {
+
+		getServer2().stop();
+		setServer2(null);
+    }
     
     
 }
