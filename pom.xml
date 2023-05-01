@@ -21,7 +21,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
+
                     <argLine>${jvm.options}</argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testing.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+
                 </configuration>
 
             </plugin>

@@ -1,2 +1,0 @@
-19:iOS:iPhone 14:com.qa.BaseTest:===========iOS=================
-19:iOS:iPhone 14:com.qa.BaseTest:iOS App Url is /Users/nikhilkumargupta/eclipse-workspace/TDDFramework2/target/test-classes/app/iOSSauceLabsMobileSample.app

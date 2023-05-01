@@ -4,23 +4,24 @@
   <listeners>
     <listener class-name="com.qa.listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="iOS_14(failed)" verbose="0">
-    <parameter name="webkitDebugProxyPort" value="11002"/>
-    <parameter name="platformVersion" value="16.1"/>
-    <parameter name="platformName" value="iOS"/>
-    <parameter name="udid" value="82DC5A28-2F0B-4069-9597-C85F2219BBDD"/>
-    <parameter name="deviceName" value="iPhone 14"/>
-    <parameter name="wdaLocalPort" value="10002"/>
+  <test thread-count="5" parallel="tests" name="Android_6_pro(failed)" verbose="0">
+    <parameter name="platformVersion" value="13"/>
+    <parameter name="chromeDriverPort" value="11000"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="deviceName" value="Pixel_6_pro"/>
+    <parameter name="systemPort" value="10000"/>
     <classes>
       <class name="com.qa.tests.ProductTests">
         <methods>
           <include name="beforeClass"/>
+          <include name="validateProductOnProductsPage"/>
           <include name="beforeSuite"/>
-          <include name="afterMethod"/>
           <include name="beforeTest"/>
+          <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="afterSuite"/>
           <include name="validateProductOnProductsdDetailPage"/>
+          <include name="afterSuite"/>
           <include name="beforeMethod"/>
           <include name="aftertest"/>
           <include name="afterMethod"/>
@@ -28,5 +29,5 @@
         </methods>
       </class> <!-- com.qa.tests.ProductTests -->
     </classes>
-  </test> <!-- iOS_14(failed) -->
+  </test> <!-- Android_6_pro(failed) -->
 </suite> <!-- Failed suite [Suite] -->

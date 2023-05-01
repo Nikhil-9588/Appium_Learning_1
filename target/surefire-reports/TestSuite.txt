@@ -1,27 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 1, Errors: 0, Skipped: 8, Time elapsed: 80.682 s <<< FAILURE! - in TestSuite
-com.qa.tests.ProductTests.afterMethod  Time elapsed: 14.772 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Tests run: 17, Failures: 1, Errors: 0, Skipped: 14, Time elapsed: 105.029 s <<< FAILURE! - in TestSuite
+com.qa.tests.ProductTests.beforeTest[Pixel_6_pro, Android, 13, emulator-5554, 10000, 11000, iOSOnly, iOSOnly](0)  Time elapsed: 30.899 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command '/Users/nikhilkumargupta/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability 
+Host info: host: 'Solvatives-MacBook-Air.local', ip: '2401:4900:1c7b:421f:51b9:11c:710e:d82d%en0'
 Build info: version: '4.9.0', revision: 'd7057100a6'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.3.1', java.version: '17.0.6'
-Driver info: io.appium.java_client.ios.IOSDriver
-Command: [c131a0b0-4ee4-41db-9122-0078c0464db0, findElement {using=xpath, value=//XCUIElementTypeOther[@name="test-Menu"]}]
-Capabilities {appium:automationName: XCUITest, appium:bundleId: com.saucelabs.SwagLabsMobil..., appium:databaseEnabled: false, appium:deviceName: iPhone 14, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 16.1, appium:takesScreenshot: true, appium:udid: 82DC5A28-2F0B-4069-9597-C85..., appium:wdaLocalPort: 10002, appium:webStorageEnabled: false, appium:webkitDebugProxyPort: 11002, platformName: IOS}
-Session ID: c131a0b0-4ee4-41db-9122-0078c0464db0
-	at com.qa.tests.ProductTests.afterMethod(ProductTests.java:107)
-Caused by: org.openqa.selenium.remote.UnreachableBrowserException: 
-Error communicating with the remote browser. It may have died.
-Build info: version: '4.9.0', revision: 'd7057100a6'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.3.1', java.version: '17.0.6'
-Driver info: io.appium.java_client.ios.IOSDriver
-Command: [c131a0b0-4ee4-41db-9122-0078c0464db0, findElement {using=xpath, value=//XCUIElementTypeOther[@name="test-Menu"]}]
-Capabilities {appium:automationName: XCUITest, appium:bundleId: com.saucelabs.SwagLabsMobil..., appium:databaseEnabled: false, appium:deviceName: iPhone 14, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 16.1, appium:takesScreenshot: true, appium:udid: 82DC5A28-2F0B-4069-9597-C85..., appium:wdaLocalPort: 10002, appium:webStorageEnabled: false, appium:webkitDebugProxyPort: 11002, platformName: IOS}
-Session ID: c131a0b0-4ee4-41db-9122-0078c0464db0
-	at com.qa.tests.ProductTests.afterMethod(ProductTests.java:107)
-Caused by: java.io.UncheckedIOException: org.asynchttpclient.exception.RemotelyClosedException: Remotely closed
-	at com.qa.tests.ProductTests.afterMethod(ProductTests.java:107)
-Caused by: org.asynchttpclient.exception.RemotelyClosedException: Remotely closed
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:appActivity=com.swaglabsmobileapp.SplashActivity, appium:appPackage=com.swaglabsmobileapp, appium:deviceName=Pixel_6_pro, appium:platformVersion=13, appium:automationName=UiAutomator2, appium:chromeDriverPort=11000, platformName=ANDROID, appium:systemPort=10000, appium:udid=emulator-5554}], desiredCapabilities=Capabilities {appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, appium:deviceName: Pixel_6_pro, appium:platformVersion: 13, automationName: UiAutomator2, chromeDriverPort: 11000, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}}]
+Capabilities {appActivity: com.swaglabsmobileapp.Splas..., appPackage: com.swaglabsmobileapp, appium:deviceName: Pixel_6_pro, appium:platformVersion: 13, automationName: UiAutomator2, chromeDriverPort: 11000, platformName: ANDROID, systemPort: 10000, udid: emulator-5554}
 

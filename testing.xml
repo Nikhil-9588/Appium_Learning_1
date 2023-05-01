@@ -28,7 +28,6 @@
   </test> 
   
 -->
-  
 
  <test name="iOS_14">
     <listeners><listener class-name = "com.qa.listeners.TestListener"></listener></listeners>
@@ -67,6 +66,22 @@
     </classes>
   </test>
 
+<!--	<test name="Android_6_pro">-->
+<!--		<listeners><listener class-name = "com.qa.listeners.TestListener"></listener></listeners>-->
+<!--		<parameter name="platformName" value ="Android" />-->
+<!--		<parameter name="deviceName" value ="Pixel_6_pro" />-->
+<!--		<parameter name="platformVersion" value ="13" />-->
+<!--		<parameter name="udid" value ="emulator-5554" />-->
+<!--		<parameter name="systemPort" value ="10000" />-->
+<!--		<parameter name="chromeDriverPort" value ="11000" />-->
+
+<!--		<classes>-->
+
+<!--			<class name="com.qa.tests.ProductTests">-->
+
+<!--			</class>-->
+<!--		</classes>-->
+<!--	</test>-->
 
   
   <!--

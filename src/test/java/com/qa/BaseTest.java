@@ -63,11 +63,14 @@ public class BaseTest {
 	public static ThreadLocal <String>  platform =  new ThreadLocal<String>();
 	protected static ThreadLocal <String> datetime= new ThreadLocal<String>();
 	public static ThreadLocal <String>  DeviceName =  new ThreadLocal<String>();
-	private static AppiumDriverLocalService server1;
-	private static AppiumDriverLocalService server2;
-	
-	
-	  
+	private static ThreadLocal <AppiumDriverLocalService> server1 =new  ThreadLocal<AppiumDriverLocalService>();
+	private static  ThreadLocal <AppiumDriverLocalService> server2= new  ThreadLocal<AppiumDriverLocalService>();
+
+	private static AppiumDriverLocalService server3;
+	private static AppiumDriverLocalService server4;
+
+
+
 	TestUtils  utils = new TestUtils();
 	
 	
@@ -161,10 +164,19 @@ public class BaseTest {
 
 
 
-	  server1 = getAppiumServer(4723);
-	  server2= getAppiumServer(4724);
-	  server1.start();
-	  server2.start();
+
+
+
+//	  setServer1(getAppiumServer(4723));
+//	  setServer2(getAppiumServer(4724));
+//	  getServer2().start();
+//	  getServer1().start();
+
+	  server3 = getAppiumServer(4723);
+	  server4 = getAppiumServer(4724);
+	  server3.start();
+	  server4.start();
+
 	  
 	  TestUtils  utils = new TestUtils();
 	  setDateTime(utils.DateTime()) ;
@@ -485,19 +497,32 @@ public void aftertest()
 //	if(getDriver() != null){
 //		getDriver().quit();
 //	}
-	
-	
-	if (server1 != null) {
-		
-        server1.stop();
-        server1 = null;
+
+
+	if (server3 != null) {
+
+		server3.stop();
+		server3=null;
     }
-    
-    if (server2 != null) {
-    	
-        server2.stop();
-        server2 = null;
-    }
+
+	if (server4 != null) {
+
+		server4.stop();
+		server4=null;
+	}
+
+
+//	if (getServer1() != null) {
+//
+//		getServer1().stop();
+//		setServer1(null);
+//    }
+//
+//    if (getServer2() != null) {
+//
+//		getServer2().stop();
+//		setServer2(null);
+//    }
     
     
 }
@@ -639,6 +664,24 @@ public String getText(WebElement e, String msg) {
 	  
 	  return txt;
 }
+
+
+	public static AppiumDriverLocalService getServer2() {
+		return server2.get();
+	}
+
+	public static void setServer2(AppiumDriverLocalService value) {
+		server2.set(value);
+	}
+
+	public static AppiumDriverLocalService getServer1() {
+		return server1.get();
+	}
+
+	public static void setServer1(AppiumDriverLocalService value) {
+		server1.set(value);
+	}
+
 
 
 

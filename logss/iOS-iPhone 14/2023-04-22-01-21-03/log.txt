@@ -1,6 +1,0 @@
-20:iOS:iPhone 14:com.qa.BaseTest:===========iOS=================
-20:iOS:iPhone 14:com.qa.BaseTest:iOS App Url is /Users/nikhilkumargupta/eclipse-workspace/TDDFramework2/target/test-classes/app/iOSSauceLabsMobileSample.app
-20:iOS:iPhone 14:com.qa.BaseTest:Super Before Method
-20:iOS:iPhone 14:com.qa.BaseTest:Super After  Method
-20:iOS:iPhone 14:com.qa.BaseTest:Super Before Method
-20:iOS:iPhone 14:com.qa.BaseTest:Super After  Method

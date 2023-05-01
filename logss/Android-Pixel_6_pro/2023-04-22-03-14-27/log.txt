@@ -1,2 +1,0 @@
-20:Android:Pixel_6_pro:com.qa.BaseTest:===========Android=================
-20:Android:Pixel_6_pro:com.qa.BaseTest:Android App Url is /Users/nikhilkumargupta/eclipse-workspace/TDDFramework2/target/test-classes/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
